@@ -8,13 +8,9 @@ class homepage{
     }
 }
 class  data{
-   //static String bankName;
-   //static String accountHolderName;
-   //static String accountType;
-   //static long accountNumber;
-   int Amount;
-   data(int amount){
-       this.Amount =Amount;
+    int Amount;
+   data(int Amount){
+       this.Amount = Amount;
 
    }
 }
@@ -67,6 +63,18 @@ class Main {
                 }
                 break;
             case 3:
+                if (list.isEmpty()){
+                    System.out.println("Out Of Balance");
+                }else {
+                    int balance = 0;
+                    for (data d : list){
+                        balance += d.Amount;
+                    }
+                    System.out.println("---------Balance--------");
+                    System.out.println("Total Balance:$"+balance);
+                }
+                break;
+            case 4:
                  System.exit(0);
            }
         }
