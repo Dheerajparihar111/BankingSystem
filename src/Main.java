@@ -1,13 +1,30 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-  //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-  // to see how IntelliJ IDEA suggests fixing it.
-  IO.println(String.format("Hello and welcome!"));
-
-  for (int i = 1; i <= 5; i++) {
-    //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-    // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-    IO.println("i = " + i);
-  }
+import java.util.*;
+class homepage{
+    void homepage(){
+        System.out.println("Enter Your Choice");
+        System.out.println("1)Deposit  Money ");
+    }
+}
+class Main{
+    static void main(String[] args) {
+        System.out.println("**********Wel-Come To Bank *************");
+        Scanner input = new Scanner(System.in);
+        homepage Home = new homepage();
+        Home.homepage();
+        int choice = input.nextInt();
+        switch (choice){
+            case 1:
+                System.out.println("Enter The Bank Name");
+                input.nextLine();
+                String bankName = input.nextLine();
+                System.out.println("Enter Account Type ");
+                String accountType = input.nextLine();
+                System.out.println("Enter Account Number");
+                long accountNumber = input.nextLong();
+                System.out.println("Enter The Amount");
+                int Amount = input.nextInt();
+                System.out.println("Money Deposited Successfully");
+                break;
+        }
+    }
 }
