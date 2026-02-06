@@ -1,23 +1,30 @@
+import java.time.chrono.ChronoLocalDate;
 import java.util.*;
+import java.time.LocalDate;
 class homepage{
     void homepage(){
-        System.out.println("Enter Your Choice");
-        System.out.println("1)Deposit  Money ");
-        System.out.println("2)Withdraw Money");
-        System.out.println("3)View Balance");
+        System.out.println("========================");
+        System.out.println("| Enter Your Choice    |");
+        System.out.println("| 1)Deposit  Money     |");
+        System.out.println("| 2)Withdraw Money     |");
+        System.out.println("| 3)View Balance       |");
+        System.out.println("| 4)Passbook Filling   |");
+        System.out.println("| 5)EXIT               |");
+        System.out.println("========================");
     }
 }
 class  data{
     int Amount;
    data(int Amount){
        this.Amount = Amount;
-
    }
 }
 class Main {
     static void main(String[] args) {
         System.out.println("**********Wel-Come To Bank *************");
         Scanner input = new Scanner(System.in);
+        LocalDate date;
+
         ArrayList <data> list = new ArrayList<>();
         homepage Home = new homepage();
         while (true){
@@ -75,6 +82,17 @@ class Main {
                 }
                 break;
             case 4:
+                System.out.println("Enter Account Holder Name");
+                input.nextLine();
+                accountHolderName = input.nextLine();
+                System.out.println("Enter Account Type ");
+                accountType = input.nextLine();
+                System.out.println("Enter Account Number");
+                accountNumber = input.nextLong();
+                System.out.println();
+
+            case 5:
+                System.out.println("Thank You For Using Bank System");
                  System.exit(0);
            }
         }
