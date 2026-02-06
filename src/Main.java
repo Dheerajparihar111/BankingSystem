@@ -96,12 +96,8 @@ class Main {
                        System.out.println("Entry"+entrys);
                        System.out.println(current);
                    }
-
-
                }
-
-
-            case 5:
+               case 5:
                 System.out.println("Thank You For Using Bank System");
                  System.exit(0);
 
